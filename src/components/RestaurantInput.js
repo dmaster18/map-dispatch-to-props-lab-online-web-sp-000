@@ -59,4 +59,4 @@ export class RestaurantInput extends Component {
 
 
 //connect this component by wrapping RestaurantInput below
-export default connect(mapStateToProps, mapDispatchToProps)(RestaurantInput)
+export default connect()(RestaurantInput)
