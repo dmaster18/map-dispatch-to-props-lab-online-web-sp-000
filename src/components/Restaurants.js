@@ -23,10 +23,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return {
-    addRestaurant: () => { dispatch(addRestaurant()) }
-    }
-  }
+  return {addRestaurant: () => { dispatch(addRestaurant()) }}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Restaurants);
