@@ -10,7 +10,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export class RestaurantInput extends Component {
+class RestaurantInput extends Component {
 
   state = {
     name: '',
