@@ -6,7 +6,7 @@ function mapDispatchToProps(dispatch){
   return { addRestaurant: (restaurant) => dispatch(addRestaurant(restaurant));}
 }
 
-export class RestaurantInput extends Component {
+class RestaurantInput extends Component {
 
   constructor(props){
     super(props);
