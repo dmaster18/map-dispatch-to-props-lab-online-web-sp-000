@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { addRestaurant } from '../actions/restaurants';
 import { connect } from 'react-redux';
 
-const mapDispatchToProps(dispatch){
+const mapDispatchToProps = (dispatch) => {
   return { addRestaurant: (restaurant) => dispatch(addRestaurant(restaurant))}
 }
 
