@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import { addRestaurant } from '../actions/restaurants';
 import { connect } from 'react-redux';
 
-const mapDispatchToProps = dispatch => {
-  
+function mapDispatchToProps(dispatch){
+  return { addRestaurant: (restaurant) => dispatch(addRestaurant(restaurant));}
 }
 
 export class RestaurantInput extends Component {
 
   constructor(props){
     super(props);
-
     this.state = {
       name: '', location: ''
     };
@@ -37,15 +36,15 @@ export class RestaurantInput extends Component {
     return(
       <form onSubmit={(event) => this.handleOnSubmit(event)}>
         <p>
-          <input 
-            type="text" 
-            onChange={(event) => this.handleOnNameChange(event)} 
+          <input
+            type="text"
+            onChange={(event) => this.handleOnNameChange(event)}
             placeholder="restaurant name" />
         </p>
         <p>
-          <input 
-            type="text" 
-            onChange={(event) => this.handleOnLocationChange(event)} 
+          <input
+            type="text"
+            onChange={(event) => this.handleOnLocationChange(event)}
             placeholder="location" />
         </p>
         <input type="submit" />
