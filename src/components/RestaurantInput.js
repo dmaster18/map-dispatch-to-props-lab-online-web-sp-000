@@ -3,7 +3,7 @@ import { addRestaurant } from '../actions/restaurants';
 import { connect } from 'react-redux';
 
 function mapDispatchToProps(dispatch){
-  return { addRestaurant: (restaurant) => dispatch(addRestaurant(restaurant));}
+  return { addRestaurant: (restaurant) => dispatch(addRestaurant(restaurant))}
 }
 
 class RestaurantInput extends Component {
