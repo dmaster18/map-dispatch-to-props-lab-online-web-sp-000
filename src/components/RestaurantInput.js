@@ -53,4 +53,4 @@ class RestaurantInput extends Component {
   }
 };
 
-export const ConnectedRestaurantInput = connect(mapDispatchToProps)(RestaurantInput)
+export default connect(mapStateToProps, mapDispatchToProps)(Restaurants);
