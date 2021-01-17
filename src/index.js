@@ -5,11 +5,16 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import manageRestaurants from './reducers/manageRestaurants';
 
-const store = createStore(manageRestaurants, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+// we wrap store in a function for testing purposes
+export const configureStore = () => {
+  return createStore(manageRestaurants, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+}
+
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <App store={store}/>
   </Provider>,
   document.getElementById('root')
 );
