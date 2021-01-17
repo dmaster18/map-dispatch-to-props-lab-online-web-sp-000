@@ -53,4 +53,4 @@ class RestaurantInput extends Component {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Restaurants);
+export default connect(mapDispatchToProps)(Restaurants);
